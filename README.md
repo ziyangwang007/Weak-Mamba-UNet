@@ -69,8 +69,47 @@ Download through [Google Drive](https://drive.google.com/file/d/14RzbbBDjbKbgr0o
 
 3. Download Dataset
 
+Download ACDC for Weak-Supervised learning through [[Google Drive]](https://drive.google.com/file/d/1XR_Id0wdvXY9QeKtdOdgJHKVJ-nVr2j1/view?usp=sharing), or [[Baidu Netdisk]](https://pan.baidu.com/s/1dHkp9daqE3kLEbAP6zl7Jw) with passcode: 'rwv2', and save in `../data/ACDC` folder.
+
+
+4. Train
+
+
+
+5. Test
+
+Test CNN-based model
+```shell
+python test_2D_fully.py -root_path ../data/XXX --exp ACDC/XXX
+```
+
+Test ViT/Mamba-based model
+```shell
+python test_2D_fully_ViT.py -root_path ../data/XXX --exp ACDC/XXX
+```
+
 
 ## Reference
+Wang, Ziyang, et al. "Mamba-unet: Unet-like pure visual mamba for medical image segmentation." arXiv preprint arXiv:2402.05079 (2024).
+
+Wang, Ziyang, and Chao Ma. "Weak-Mamba-UNet: Visual Mamba Makes CNN and ViT Work Better for Scribble-based Medical Image Segmentation." arXiv preprint arXiv:2402.10887 (2024).
 
 
+```bibtex
+@article{wang2024mamba,
+  title={Mamba-unet: Unet-like pure visual mamba for medical image segmentation},
+  author={Wang, Ziyang and Zheng, Jian-Qing and Zhang, Yichi and Cui, Ge and Li, Lei},
+  journal={arXiv preprint arXiv:2402.05079},
+  year={2024}
+}
+
+@article{wang2024weakmamba,
+  title={Weak-Mamba-UNet: Visual Mamba Makes CNN and ViT Work Better for Scribble-based Medical Image Segmentation},
+  author={Wang, Ziyang and Ma, Chao},
+  journal={arXiv preprint arXiv:2402.10887},
+  year={2024}
+}
+```
 ## Contact
+
+ziyang [dot] wang17 [at] gmail [dot] com
