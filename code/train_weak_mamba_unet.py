@@ -37,7 +37,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--root_path', type=str,
                     default='../data/ACDC', help='Name of Experiment')
 parser.add_argument('--exp', type=str,
-                    default='semi_mamba_unet', help='experiment_name')
+                    default='weak_mamba_unet', help='experiment_name')
 parser.add_argument('--fold', type=str,
                     default='fold1', help='cross validation')
 parser.add_argument('--sup_type', type=str,
@@ -47,7 +47,7 @@ parser.add_argument('--model', type=str,
 parser.add_argument('--num_classes', type=int,  default=4,
                     help='output channel of network')
 parser.add_argument('--max_iterations', type=int,
-                    default=60000, help='maximum epoch number to train')
+                    default=30000, help='maximum epoch number to train')
 parser.add_argument('--batch_size', type=int, default=12,
                     help='batch_size per gpu')
 parser.add_argument('--deterministic', type=int,  default=1,
@@ -199,14 +199,6 @@ def train(args, snapshot_path):
     modelB = ViM_seg(config2, img_size=args.patch_size,
                      num_classes=args.num_classes).cuda()
     modelB.load_from(config2)
-
-    # modelC = ViT_seg(config, img_size=args.patch_size,
-    #                  num_classes=args.num_classes).cuda()
-    # modelC.load_from(config)
-
-    # modelA = create_model() 
-
-    # modelB = create_model()
 
     modelC = create_model()
 

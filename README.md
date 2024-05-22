@@ -74,18 +74,40 @@ Download ACDC for Weak-Supervised learning through [[Google Drive]](https://driv
 
 4. Train
 
+```shell
+cd code
+```
 
+5. Train 2D UNet with pCE
 
-5. Test
+```shell
+python train_weakly_supervised_pCE_2D.py 
+```
+
+6. Train 2D SwinUNet with pCE
+```shell
+python train_weakly_supervised_pCE_2D_ViT.py 
+```
+
+7. Train 2D SwinUNet with MT and pCE 
+```shell
+python train_weakly_supervised_ustm_2D_ViT.py 
+```
+
+8. Train 2D Semi-Mamba-UNet with pCE 
+```shell
+python train_weak_mamba_unet.py 
+```
+
+9. Test
 
 Test CNN-based model
 ```shell
-python test_2D_fully.py -root_path ../data/XXX --exp ACDC/XXX
+python test_2D.py -root_path ../data/XXX --exp ACDC/XXX
 ```
-
 Test ViT/Mamba-based model
 ```shell
-python test_2D_fully_ViT.py -root_path ../data/XXX --exp ACDC/XXX
+python test_2D_fully.py -root_path ../data/XXX --exp ACDC/XXX
 ```
 
 
